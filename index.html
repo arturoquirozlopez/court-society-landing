@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Court Society — A private network for those who play.</title>
-<meta name="description" content="Court Society is a private members network for founders, investors, and operators who play tennis. By nomination. Active in Santiago, São Paulo, and Miami." />
+<meta name="description" content="Court Society is a private members network for founders, investors, and operators who play tennis. By nomination. Currently in Beta — Santiago." />
 <meta property="og:title" content="Court Society" />
-<meta property="og:description" content="A private network for those who play. By nomination. Active in Santiago, São Paulo, and Miami." />
+<meta property="og:description" content="A private network for those who play. By nomination. Currently in Beta — Santiago." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://courtsociety.org" />
 <meta name="theme-color" content="#0E2A1F" />
@@ -50,16 +50,16 @@
     --hairline-soft: #DDD6C3;
 
     /* Grid — max widths */
-    --max-wide:     1200px;   /* page-level container */
-    --max-content:   960px;   /* structured sections (How, Members, Cities) */
-    --max-prose:     580px;   /* editorial prose (Society, Philosophy) */
+    --max-wide:     1200px;
+    --max-content:   960px;
+    --max-prose:     580px;
 
     /* Grid — horizontal gutter (fluid, scales with viewport) */
     --gutter: clamp(24px, 6vw, 144px);
 
     /* Vertical rhythm */
     --section-y:    clamp(72px, 9vw, 144px);
-    --section-y-first: clamp(56px, 6vw, 96px); /* first section after hero */
+    --section-y-first: clamp(56px, 6vw, 96px);
 
     /* Standard internal spacing */
     --gap-eyebrow-to-title: 20px;
@@ -79,7 +79,6 @@
     --tracking-caps-tight: 0.22em;
   }
 
-  /* Bigger gutter at 1920+ for cinema-sized displays */
   @media (min-width: 1920px) {
     :root { --gutter: clamp(144px, 11vw, 240px); }
   }
@@ -240,7 +239,6 @@
     z-index: 2;
     max-width: 720px;
     color: var(--ivory);
-    /* Subtle brass rule at left edge — graphic anchor */
     border-left: 1px solid rgba(166,139,91,0.4);
     padding-left: clamp(20px, 2.4vw, 36px);
   }
@@ -567,12 +565,10 @@
 
   /* ─── Responsive ───────────────────────────────────────────── */
 
-  /* Tablet (≥ 768) — defaults already work. Just refine touchpoints. */
   @media (max-width: 1023px) {
     .hero { padding-block: 14vh 12vh; min-height: 92vh; }
   }
 
-  /* Tablet + smaller phones */
   @media (max-width: 767px) {
     .hero { min-height: 88vh; padding-block: 18vh 10vh; }
     .hero-content {
@@ -603,7 +599,6 @@
     }
   }
 
-  /* Small phones */
   @media (max-width: 479px) {
     .wordmark { font-size: 13px; letter-spacing: 0.32em; }
     .apply-link, .login-link { font-size: 10px; letter-spacing: 0.22em; }
@@ -612,12 +607,9 @@
     .hero p.lede { font-size: 16px; }
   }
   @media (max-width: 359px) {
-    /* Ultra-narrow: hide Apply in header, leave only the smaller Login.
-       The hero CTA and footer CTA cover Apply on these phones. */
     .nav-actions .apply-link { display: none; }
   }
 
-  /* Reduce motion */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
@@ -656,7 +648,7 @@
     </p>
     <div class="hero-meta">
       <a href="https://app.courtsociety.org" class="hero-apply" rel="noopener">Apply for Membership</a>
-      <span class="hero-cities">Now active in Santiago&nbsp;·&nbsp;São Paulo&nbsp;·&nbsp;Miami</span>
+      <span class="hero-cities">Now in Beta&nbsp;·&nbsp;Santiago</span>
     </div>
   </div>
 </section>
@@ -731,11 +723,15 @@
     <div class="directory">
 
       <div class="directory-block">
-        <div class="directory-label">Active</div>
+        <div class="directory-label">Active &nbsp;·&nbsp; Beta</div>
         <div class="directory-row">
           <span class="city-name">Santiago</span>
           <span class="city-meta">Chile</span>
         </div>
+      </div>
+
+      <div class="directory-block directory-block--forthcoming">
+        <div class="directory-label">Coming Soon</div>
         <div class="directory-row">
           <span class="city-name">São Paulo</span>
           <span class="city-meta">Brazil</span>
@@ -744,10 +740,6 @@
           <span class="city-name">Miami</span>
           <span class="city-meta">United States</span>
         </div>
-      </div>
-
-      <div class="directory-block directory-block--forthcoming">
-        <div class="directory-label">Coming Soon</div>
         <div class="directory-row">
           <span class="city-name">Madrid</span>
           <span class="city-meta">Spain</span>
@@ -784,7 +776,7 @@
       </div>
       <div class="get-row">
         <div class="get-name">City Houses</div>
-        <div class="get-detail">A small, hosted group in each active city — Santiago House, São Paulo House, Miami House — run by a local Member.</div>
+        <div class="get-detail">A small, hosted group in each active city, run by a local Member. Santiago House now — São Paulo, Miami, and more to follow.</div>
       </div>
       <div class="get-row">
         <div class="get-name">Club ecosystem</div>
